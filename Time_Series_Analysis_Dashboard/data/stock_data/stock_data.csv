@@ -1,0 +1,19 @@
+python
+import os
+import csv
+
+file_path = os.path.join("Time_Series_Analysis_Dashboard", "data", "stock_data", "stock_data.csv")
+
+header_row = ["Date", "Open", "High", "Low", "Close", "Volume"]
+
+data_rows = [
+    ["2022-01-01", 100.00, 105.00, 98.00, 102.00, 100000],
+    ["2022-01-02", 102.00, 110.00, 100.00, 108.00, 120000],
+    ["2022-01-03", 108.00, 112.00, 105.00, 110.00, 90000],
+    ["2022-01-04", 110.00, 115.00, 105.00, 112.00, 80000],
+]
+
+with open(file_path, mode="w", newline="") as csv_file:
+    writer = csv.writer(csv_file)
+    writer.writerow(header_row)
+    writer.writerows(data_rows)
