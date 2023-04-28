@@ -1,0 +1,12 @@
+
+import os
+
+project_dir = "Time_Series_Analysis_Dashboard"
+aws_dir = os.path.join(project_dir, "aws")
+redshift_dir = os.path.join(aws_dir, "redshift")
+
+filename = "redshift.txt"
+file_path = os.path.join(redshift_dir, filename)
+
+with open(file_path, 'w') as f:
+    f.write("This is the redshift.txt file in the Time_Series_Analysis_Dashboard/aws/redshift directory.")
