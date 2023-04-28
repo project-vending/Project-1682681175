@@ -1,0 +1,9 @@
+
+import os
+
+# define the file path for s3.txt
+s3_path = os.path.join("Time_Series_Analysis_Dashboard", "aws", "s3", "s3.txt")
+
+# open s3.txt in write mode and write to it
+with open(s3_path, "w") as f:
+    f.write("Hello, S3!")
